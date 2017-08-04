@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66421B261F2AE73B002D1296 /* Circle.m in Sources */ = {isa = PBXBuildFile; fileRef = 66421B251F2AE73B002D1296 /* Circle.m */; };
 		66440B531F1DEBC100C4DA66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 66440B521F1DEBC100C4DA66 /* main.m */; };
 		66440B561F1DEBC100C4DA66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 66440B551F1DEBC100C4DA66 /* AppDelegate.m */; };
 		66440B591F1DEBC100C4DA66 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 66440B581F1DEBC100C4DA66 /* ViewController.m */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6631117D1F1E5044002E56F9 /* enotest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = enotest.entitlements; sourceTree = "<group>"; };
+		66421B241F2AE73B002D1296 /* Circle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Circle.h; sourceTree = "<group>"; };
+		66421B251F2AE73B002D1296 /* Circle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Circle.m; sourceTree = "<group>"; };
 		66440B4E1F1DEBC100C4DA66 /* enotest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = enotest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66440B521F1DEBC100C4DA66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		66440B541F1DEBC100C4DA66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,6 +43,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66421B231F2AE6DD002D1296 /* LFUtils */ = {
+			isa = PBXGroup;
+			children = (
+				66421B241F2AE73B002D1296 /* Circle.h */,
+				66421B251F2AE73B002D1296 /* Circle.m */,
+			);
+			name = LFUtils;
+			sourceTree = "<group>";
+		};
 		66440B451F1DEBC100C4DA66 = {
 			isa = PBXGroup;
 			children = (
@@ -58,6 +71,8 @@
 		66440B501F1DEBC100C4DA66 /* enotest */ = {
 			isa = PBXGroup;
 			children = (
+				66421B231F2AE6DD002D1296 /* LFUtils */,
+				6631117D1F1E5044002E56F9 /* enotest.entitlements */,
 				66440B541F1DEBC100C4DA66 /* AppDelegate.h */,
 				66440B551F1DEBC100C4DA66 /* AppDelegate.m */,
 				66440B571F1DEBC100C4DA66 /* ViewController.h */,
@@ -110,7 +125,13 @@
 				TargetAttributes = {
 					66440B4D1F1DEBC100C4DA66 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 83X57PFQAK;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -151,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				66440B591F1DEBC100C4DA66 /* ViewController.m in Sources */,
+				66421B261F2AE73B002D1296 /* Circle.m in Sources */,
 				66440B561F1DEBC100C4DA66 /* AppDelegate.m in Sources */,
 				66440B531F1DEBC100C4DA66 /* main.m in Sources */,
 			);
@@ -219,7 +241,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -262,7 +284,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -274,9 +296,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = enotest/enotest.entitlements;
+				DEVELOPMENT_TEAM = 83X57PFQAK;
 				INFOPLIST_FILE = enotest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = enosoft.enotest.com.enotest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushDemo.enosoft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -285,9 +309,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = enotest/enotest.entitlements;
+				DEVELOPMENT_TEAM = 83X57PFQAK;
 				INFOPLIST_FILE = enotest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = enosoft.enotest.com.enotest;
+				PRODUCT_BUNDLE_IDENTIFIER = com.pushDemo.enosoft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -311,6 +337,7 @@
 				66440B671F1DEBC100C4DA66 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
